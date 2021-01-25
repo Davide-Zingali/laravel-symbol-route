@@ -2,8 +2,8 @@
 
 @section('content')
     <!-- main -->
-    <h1>
-        Home
+    <h2 class='nero'>
+        About
     </h1>
-    
+
 @endsection

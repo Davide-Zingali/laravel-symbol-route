@@ -8,19 +8,13 @@
     <title>Nuovo progetto</title>
 </head>
 <body>
-
     <div id="container">
-
         <!-- header -->
         @include('components.header')
-
         <!-- main -->
         @yield('content')
-
         <!-- footer -->
         @include('components.footer')
-
     </div>
-    
 </body>
 </html>

@@ -2,8 +2,8 @@
 
 @section('content')
     <!-- main -->
-    <h1>
+    <h2 class="blu">
         Blog
-    </h1>
+    </h2>
 
 @endsection
