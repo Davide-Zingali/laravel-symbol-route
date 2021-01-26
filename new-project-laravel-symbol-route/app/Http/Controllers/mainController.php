@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class mainController extends Controller
 {
-    public function payment() {
-        
+    // funzione di dati
+    public function dati() {
         $pagamenti = [
             ['id' => '1','status' => 'pending','price' => '1000.00','prenotazione_id' => '1','pagante_id' => '3','created_at' => '2018-05-28 13:53:45','updated_at' => '2018-05-28 13:53:45'],
             ['id' => '2','status' => 'rejected','price' => '773.00','prenotazione_id' => '2','pagante_id' => '23','created_at' => '2018-05-28 13:53:45','updated_at' => '2018-05-28 13:53:45'],
@@ -41,10 +41,31 @@ class mainController extends Controller
             ['id' => '30','status' => 'pending','price' => '991.00','prenotazione_id' => '30','pagante_id' => '21','created_at' => '2018-05-28 13:53:45','updated_at' => '2018-05-28 13:53:45']
         ];
 
+        return $pagamenti;
+    }
+
+    // funzione pagamenti
+    public function payment() {
+        
+        $pagamenti = $this -> dati();
+
         return view('pages.pagamenti-page', compact('pagamenti'));
     }
+
     // funzione pagamenti in attesa
     public function paymentPending() {
-        return view('pages.pagamenti-pending-page');
+
+        $paymentPending = $this -> dati();
+
+        $pagamentiAttesi = [];
+
+        foreach ($paymentPending as $key => $value) {
+            
+            if ($value['status'] == 'pending') {
+                $pagamentiAttesi[] = $value;
+            }
+        }
+
+        return view('pages.pagamenti-pending-page', compact('pagamentiAttesi'));
     }
 }

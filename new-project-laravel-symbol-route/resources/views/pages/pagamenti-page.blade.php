@@ -8,19 +8,19 @@
 
         {{-- ciclo per stampare ogni elemento --}}
         @foreach ($pagamenti as $element)
-                @if ($loop -> even)
-                    <p class="verde">
-                        @foreach ($element as $key => $item)
-                            {{$key}}: {{$item}};
-                        @endforeach
-                    </p>
-                @else
-                    <p class="giallo">
-                        @foreach ($element as $key => $item)
-                            {{$key}}: {{$item}};
-                        @endforeach
-                    </p>
-                @endif
+            @if ($loop -> even)
+                <p class="verde">
+                    @foreach ($element as $key => $item)
+                        {{$key}}: {{$item}};
+                    @endforeach
+                </p>
+            @else
+                <p class="giallo">
+                    @foreach ($element as $key => $item)
+                        {{$key}}: {{$item}};
+                    @endforeach
+                </p>
+            @endif
         @endforeach
     </main>
 @endsection
