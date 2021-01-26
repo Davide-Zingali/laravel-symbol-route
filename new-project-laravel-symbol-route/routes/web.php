@@ -2,4 +2,5 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', 'mainController@home');
+Route::get('/payment', 'mainController@payment');
+Route::get('/payment-pending', 'mainController@paymentPending');

@@ -1,5 +1,13 @@
 body {
-  background-color: purple;
+  background-color: #420042;
   color: white;
+}
+
+.verde {
+  color: greenyellow;
+}
+
+.giallo {
+  color: yellow;
 }
 

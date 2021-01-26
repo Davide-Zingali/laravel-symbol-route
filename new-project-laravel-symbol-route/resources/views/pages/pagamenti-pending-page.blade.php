@@ -3,7 +3,7 @@
 @section('content')
     <main>
         <h2>
-            Main
+            Pagamenti in attesa
         </h2>
     </main>
 @endsection
